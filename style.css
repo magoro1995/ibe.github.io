@@ -1,0 +1,844 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+p
+{
+    font-weight: 300;
+    color: #111;
+}
+body
+{
+    display: flex;
+    flex-direction: column;
+    min-height: 1000px;
+}
+.banner
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background: url(churchCartoon.png);
+    background-size: cover;
+    box-shadow:  0 0 8px 20px #fff inset;
+}
+.banner .contentport
+{
+max-width: 900px;
+text-align: center;
+}
+.banner .contentport h2
+{
+    font-family: sketchZone;
+    font-size: 5em;
+    color: #666;
+    text-shadow: 0 0 40px #fff, 0 0 40px #fff, 0 0 80px #fff;
+    
+}
+.banner .contentport h3
+{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    color: #fff;
+    text-shadow: 0 0 15px #fff;
+}
+.banner .contentport h2:hover
+{
+    transform: scale(1.1);
+    transition: 2s;
+}
+.banner .contentport p
+{
+    font-family: Amalfi;
+    font-size: 3em;
+    color:lightseagreen;
+    text-shadow: 0 0 10px lightseagreen;
+}
+.banner .contentport p:hover
+{
+    transform: scale(1.1);
+    transition: 2s;
+}
+.banner .contentport h2 img
+{
+    margin: -40px;
+    width: 150px;   
+}
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+header.sticky
+{
+    background: #fff;
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+header .logo
+{
+    color: #fff;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 1s;
+}
+header .logo:hover
+{
+    transform: scale(1.2);
+    transition: 1s;
+    letter-spacing: 6px;
+    text-shadow: 0 0 10px lightseagreen, 0 0 40px #666, 0 0 80px #2196f3;
+}
+header .logo img:hover
+{
+    transform: scale(1.2);
+    transition: 1s;
+}
+header.sticky .logo
+{
+    color: #111;
+}
+header.sticky .logo img
+{
+    box-shadow: none;
+}
+header .logo span
+{
+    color: lightseagreen;
+}
+header .navigation
+{
+    position: relative;
+    display: flex;
+}
+header .navigation li a
+{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+}
+header.sticky .navigation a,
+header.sticky .navigation .subnav .subnavbtn
+{
+    color: #111;
+}
+header.sticky .navigation a:hover,
+header.sticky .navigation .subnav .subnavbtn:hover
+{
+    color: #fff;
+}
+/* header .navigation a:hover
+{
+    color: #ff0157;
+} */
+
+.navigation a 
+{
+    float: left;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.subnav {
+    float: left;
+    overflow: hidden;
+}
+
+.subnav .subnavbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;  
+    color: #fff;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navigation a:hover,
+.subnav:hover .subnavbtn {
+    background-color: #666;
+    color: #fff;
+    transition: 1s;
+}
+
+.subnav-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #666;
+    width: 100%;
+    z-index: 1;
+}
+
+.subnav-content a {
+    float: left;
+    color: #000;
+    text-decoration: none;
+    background: #eee;
+}
+
+.subnav-content a:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+.subnav:hover .subnav-content {
+    display: contents;
+}
+
+section
+{
+    padding: 100px;
+}
+.row
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.row .col50
+{
+    position: relative;
+    width: 48%;
+}
+.titleText
+{
+    padding: 10px;
+    text-shadow: 0 0 50px #000;
+    font-family: sketchZone;
+    color: #111;
+    font-size: 3em;
+    font-weight: 300;
+    text-align: center;
+}
+.col50 p
+{
+    text-shadow: 0 0 50px #000;
+    font-size: 2em;
+    text-align: center;
+}
+.titleText span
+{
+    font-family: sketchZone;
+    color: #ff0157;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+.row .col50 .imgBx
+{
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+}
+.row .col50 .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow:  0 0 40px #666, 0 0 40px #fff, 0 0 80px #666;
+}
+.title
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.menus
+{
+    display: flex;
+    flex-direction: row;
+    background: #666;
+}
+.meditar
+{
+    position: relative;
+    width: 70%;    
+}
+.meditar .content p
+{
+    color: #fff;
+}
+.menu2
+{
+    margin-top: -70px;
+    position: relative;
+    top: -150px;
+    width: 30%;
+}
+.content
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 40px;
+}
+.content .box
+{    
+    width: 100%;
+    margin: 0px;  
+    text-align: justify;
+    text-shadow: 0 0 20px #666;
+    /* border-radius: 20px; 
+    border: 3px solid #fff;
+    box-shadow:  0 0 40px #666, 0 0 40px #fff, 0 0 80px #666; */
+}
+.content .box img
+{
+    width: 5em;
+    height: 5em;
+    float: left;
+    margin: 20px;
+}
+.content .box p
+{
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+    margin: 10px;
+    
+}
+.anuncio
+{
+    background: lightseagreen;
+}
+.anuncio .content
+{
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.calendar{
+    position: relative;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    width: 800px;
+    height: 450px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border: 15px solid #fff; 
+    box-shadow: 0 0 40px #fff;
+}
+.calendar .date{
+    width: 400px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.calendar .date h3{
+    margin: 0 0 20px; 
+    padding: 0;
+    font-size: 24px; 
+    font-weight: 500;
+    text-align: center;
+    user-select: none; 
+    text-transform: capitalize; 
+}
+.calendar .date .days{
+    display: flex;
+    flex-wrap: wrap; 
+}
+.calendar .date .days .number.active{
+    background-color: #362b48;
+    color: #fff;
+    cursor: pointer; 
+    border-radius: 50%; 
+}
+.calendar .date .days .day,
+.calendar .date .days .number{
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+.calendar .date .days .day
+{
+    border-radius: 50%;
+    text-shadow: 0 0 20px #555;
+}
+.calendar .date .days .day:first-child,
+.calendar .date .days .number:nth-child(7n+1){ 
+    color: #f44336;
+    font-weight: 600;
+}
+.calendar .birth
+{
+    padding: 30px;
+    align-items: center;
+    width: 350px;
+    height: 100%;
+    user-select: none;
+}
+.calendar .birth h2
+{
+    padding: 20px;
+}
+.anuncio .content .varios
+{
+    margin-left: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.anuncio .content .varios .anuncios,
+.anuncio .content .varios .obituario
+{
+    
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 0 40px #fff;
+    border-radius: 20px;
+}
+.anuncio .content .anuncios h2,
+.anuncio .content .obituario h2
+{
+    padding: 20px;
+}
+.gotas
+{
+    background: gray;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.white .titleText,
+.white p
+{
+    color: #fff;
+}
+.gotas .container
+{
+    margin-top: 20px;
+    position: relative;
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+.gotas .container .card
+{
+    border-radius: 10px;
+    position: relative;
+    max-width: 300px;
+    height: 215px;
+    background: #fff;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+}
+.gotas .container .card:hover
+{
+    box-shadow: 0 0 40px #fff;
+    height: max-content;
+    transition: 0.5s;
+
+
+}
+.gotas .container .card .imgBx
+{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -60px;
+    left: 25px;
+    z-index: 1;
+    /* box-shadow: 0 5px 20px rgba(0,0,0,0.5); */
+}
+.gotas .container .card .imgBx img
+{
+    max-width: 100%;
+    height: 90%;
+    border-radius: 10px;
+}
+.gotas .container .card .content
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #111;
+        visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+.gotas .container .card:hover .content
+{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -60px;
+    transition-delay: 0.5s;
+}
+.blog
+{
+    display: flex;
+    flex-direction: row;
+}
+.compasivos
+{
+    width: 50%;
+}
+.last
+{
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    background: #666;
+}
+.last .pastor
+{
+    width: 60%;
+}
+.last .pastor .content p
+{
+    color: #fff;
+}
+.last .predica
+{
+    width: 40%;
+    background: #666;
+}
+.last .predica .content video
+{
+    max-width: 90%;
+    z-index: 1000;
+}
+.visor
+{
+    width: 50%;
+}
+.swiper-cantainer
+{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.swiper-slide
+{
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 400px;
+    background: #fff;
+    box-shadow: 0 0 40px #fff;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent,#0006);
+}
+.swiper-slide .imgBx
+{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+.swiper-slide .imgBx img
+{
+    width: 100%;
+}
+.swiper-slide .details
+{
+    box-sizing: border-box;
+    padding: 20px;
+}
+.swiper-slide .details h3
+{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+.swiper-slide .details h3 span
+{
+    font-size: 16px;
+    color: lightseagreen;
+}
+.ccontainer
+{
+    flex-direction: column;
+    position: relative;
+    top: 100px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: -60px;
+    padding: 20px 0;
+}
+.ccontainer .card
+{
+    position: relative;
+    top: -20px;
+    height: 250px;
+    background: #fff;
+    display: flex;
+    width: 100%;
+    margin: 30px 0;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.ccontainer .card .imgBx
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255,255,255,1);
+    backdrop-filter: blur(20px);
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.1);
+    transition: 0.5s ease-in-out;
+}
+.ccontainer .card:hover .imgBx
+{
+    width: 150px;
+    height: 150px;
+    left: -75px;
+    top: calc(50% - 75px);
+    box-shadow: 0 0 40px lightseagreen;
+}
+.ccontainer .card .imgBx img
+{
+    max-width: 100px;
+    filter: invert(1);
+    transition: 0.5s ease-in-out;
+}
+.ccontainer .card .content
+{
+    position: absolute;
+    right: 0;
+    width: calc(100%-75px);
+    height: 110%;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.ccontainer .card .content p
+{
+    margin-left: 60px;
+    overflow: hidden;
+}
+.ccontainer .card .content::before
+{
+    content: '';
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(transparent,#fff);
+}
+.ccontainer .card .content h3
+{
+    color: lightseagreen;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+.ccontainer .card .content .more
+{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 20px;
+    border-radius: 5px;
+    background: lightseagreen;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+.ccontainer .card .content .more::before
+{
+    content: 'Leer más';
+}
+.ccontainer .card.active .content .more::before
+{
+    content: 'Leer menos';
+}
+.ccontainer .card.active 
+{
+    height: 600px;
+}
+.ccontainer .card.active .content::before
+{
+    display: none;
+}
+/* Slideshow container */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    /* margin: auto; */
+    padding-top: 20px;
+}
+
+  /* Hide the images by default */
+.mySlides {
+    width: 100%;
+    display: none;
+    box-shadow: 0 0 45px #000;
+    /* filter: sepia(); */
+}
+
+  /* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+  /* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+  /* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+  /* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+  /* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 20px 12px;
+    position: absolute;
+    top: 0;
+}
+
+  /* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+  /* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+.copyright
+{
+    margin-top: 0px;
+    width: 100%;
+    background: #666;
+    padding: 8px 100px;
+    text-align: center;
+    color: #fff;
+}
+.copyright p
+{
+    color: #fff;
+}
+@font-face
+{
+    font-family: 'Amalfi';
+    src: url('fonts/Amalfi.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face
+{
+    font-family: 'sketchGothic';
+    src: url('fonts/sketchGothic.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face
+{
+    font-family: 'sketchZone';
+    src: url('fonts/Sketchzone.otf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
